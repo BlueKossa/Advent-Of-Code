@@ -1,4 +1,11 @@
+# Input files
+input.*
+# Rust
 target
 cargo.lock
-input.*
+# Executables
 *.exe
+# ZIG
+zig-cache
+zig-out
+build.zig
