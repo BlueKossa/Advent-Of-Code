@@ -26,7 +26,6 @@ func part_one(dat []byte) int {
 		x, y := line[0:len(line)/2], line[len(line)/2:]
 		for _, char := range x {
 			if strings.Contains(y, string(char)) {
-				y = strings.ReplaceAll(y, string(char), "")
 				sum += convert(char)
 				break
 			}
@@ -56,8 +55,4 @@ func convert(s rune) int {
 	} else {
 		return int(s) - 96
 	}
-}
-
-func String(char rune) {
-	panic("unimplemented")
 }
