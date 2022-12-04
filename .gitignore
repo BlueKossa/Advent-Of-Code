@@ -8,3 +8,5 @@ cargo.lock
 # ZIG
 zig-cache
 zig-out
+# JAR
+*.jar
