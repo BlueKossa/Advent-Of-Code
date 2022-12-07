@@ -14,10 +14,10 @@ fun main() {
     val inputLines = File("input.txt").readLines()
     var filesystem: HashMap<List<String>, Dir> = HashMap()
     var currentPath: List<String> = listOf("/")
-    var currentDir: Dir = Dir(currentPath, 0)
-    filesystem.put(currentPath.dropLast(1), currentDir)
+    var currentDir: Dir = Dir(currentPath.dropLast(1), 0)
+
     for (line in inputLines) {
-        if (line.contains("$")) {
+        if (line.contains("$") || line == "") {
             if (line == "$ cd /" || line == "$ ls") {
                 continue;
             }
@@ -29,7 +29,7 @@ fun main() {
                     filesystem.get(path)!!.size += currentDir.size
                     path = path.dropLast(1)
                 }
-            }
+            } if (line == "") continue;
 
             val dir = line.split(" ")[2]
             if (dir == "..") {
