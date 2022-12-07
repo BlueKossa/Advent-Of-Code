@@ -17,4 +17,4 @@ file = File.open('input.txt')
 input = file.read
 file.close
 
-puts("Day 1: #{get_marker(4, input)}\nDay 2: #{get_marker(14, input)}")
+puts("Part 1: #{get_marker(4, input)}\nPart 2: #{get_marker(14, input)}")

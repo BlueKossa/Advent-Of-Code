@@ -63,5 +63,5 @@ fun main() {
             optimalDir = size
         }
     }
-    println("Day 1: ${total}\nDay 2: ${optimalDir}")
+    println("Part 1: ${total}\nPart 2: ${optimalDir}")
 }
