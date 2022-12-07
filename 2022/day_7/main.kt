@@ -62,7 +62,6 @@ fun main() {
         if (size >= requiredSpace && size < optimalDir) {
             optimalDir = size
         }
-
     }
     println("Day 1: ${total}\nDay 2: ${optimalDir}")
 }
