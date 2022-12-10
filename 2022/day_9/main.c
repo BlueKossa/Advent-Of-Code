@@ -118,6 +118,7 @@ int main(int argc, char* argv[])
     int part_one = rope(input, 2);
     rewind(input);
     int part_two = rope(input, 10);
+    fclose(input);
     printf("Part 1: %d\nPart 2: %d", part_one, part_two);
 }
 
