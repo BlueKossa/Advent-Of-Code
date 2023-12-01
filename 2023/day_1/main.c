@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "../../utils/utils.c"
 
 int char_to_int(char c) {
     return c - '0';
@@ -19,23 +20,6 @@ int slice_to_int(char* slice) {
         }
     }
     return -1;
-}
-
-char* read_file(char* path) {
-    FILE* file = fopen(path, "r");
-    if (file == NULL) {
-        printf("Error opening file\n");
-        return NULL;
-    }
-    fseek(file, 0, SEEK_END);
-    long length = ftell(file);
-    fseek(file, 0, SEEK_SET);
-    char* buffer = malloc(length + 1);
-    if (buffer) {
-        fread(buffer, 1, length, file);
-    }
-    fclose(file);
-    return buffer;
 }
 
 int solve(char* input, int part_two) {
