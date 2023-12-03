@@ -1,10 +1,12 @@
 # Input files
 input.*
+*.txt
 # Rust
 target
 cargo.lock
 # Executables
 *.exe
+*.out
 # ZIG
 zig-cache
 zig-out
